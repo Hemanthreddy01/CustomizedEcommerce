@@ -23,7 +23,7 @@ function Login({ setIsLoggedIn, setUserName, setActiveCategory }) {
         return;
       }
 
-     
+      await response.json();
 
       // Extract username and capitalize
       const name = emailOrMobile.split("@")[0];
