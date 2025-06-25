@@ -18,11 +18,12 @@ function Login({ setIsLoggedIn, setUserName, setActiveCategory }) {
       });
 
       if (!response.ok) {
-        const data = await response.json();
+        const data = await response.json(); // used here for error message
         setErrorMessage(data.error || "Login failed. Please try again.");
         return;
       }
 
+      // No need to store data if not used:
       await response.json();
 
       // Extract username and capitalize
